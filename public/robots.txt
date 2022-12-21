@@ -1,0 +1,15 @@
+User-agent: * 
+Disallow: /productsets/*
+Disallow: /configurator/*
+Disallow: /admin/*
+Disallow: /admin
+Disallow: /login/*
+Disallow: /login
+Disallow: /lead/*
+Disallow: /lead
+Disallow: /*?*
+Disallow: /emailauth
+Disallow: /seo
+
+
+
