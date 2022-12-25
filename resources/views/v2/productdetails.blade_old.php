@@ -134,23 +134,20 @@
 						<li class="list-group-item" style="padding-top: 2px;padding-bottom: 2px;">Availability <p style="color:#aaa;padding-top: 2px;padding-bottom:2px;">Please Click "Check Price Now" to get the latest Stock Status for {{$productData->name}} for {{$country}}</p></li>
 					</ul>
 					<hr/>
-					<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-					<!-- /*
 					@if(isset($options) && is_array($options) && count($options)>0)
 						<a href="{{$link_prefix}}/configurator/{{$productData->prod_id}}"><button type="button" class="btn btn-brand"><span class="small">Configure Product Options &<br/></span> CHECK PRICE NOW</button></a>
-					@else 
-					 */ -->
+					@else
 
 					<button type="button" class="btn_cartload btn btn-brand">CHECK PRICE NOW</button>
 
-  					<!--
+
 					@endif
-					
+
 
 					@if(isset($options) && is_array($options) && count($options)>0)
 
 					<div style="margin-top:20px;width:100%;border-top:solid #fdd700 1px;padding:10px;padding-top: 2px;padding-bottom: 2px;">
-					<b >The product has following configurable options </b><br/>
+					<b >The product has following configurable options</b><br/>
 					<ul class="list-group list-group-flush" style="margin-top:15px;">
 					@foreach($options as $option)
 
@@ -161,7 +158,7 @@
                     @endforeach
                 	</ul>
                 	</div>
-                	@endif -->
+                	@endif
 				</div>
 			</div>
 
@@ -178,14 +175,12 @@
 			    <a class="nav-link tabheader" id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="features" aria-selected="false">Description</a>
 			  </li>
 			  	@endif
-  			<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-					<!-- /*
+
 			  	@if(isset($docs) && $docs!=null && is_array($docs))
 			  <li class="nav-item">
 			    <a class="nav-link active tabheader" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="true">Documents</a>
 			  </li>
-			  @endif 
-			*/ -->
+			  @endif
 			  <li class="nav-item">
 			    <a class="nav-link tabheader" id="diferentiators-tab" data-toggle="tab" href="#diferentiators" role="tab" aria-controls="diferentiators" aria-selected="false">Our Differentiators</a>
 			  </li>
@@ -217,8 +212,7 @@
 
 			  </div>
 			  @endif
-  			<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-			<!--
+
 			  @if(isset($docs) && $docs!=null && is_array($docs))
 			  <div class="tab-pane fade show active" id="documents" role="tabpanel"
 			  aria-labelledby="profile-tab" style="padding:30px;background-color:#fafafa;">
@@ -228,7 +222,7 @@
 					<ul class="list-group">
 					@foreach($doc["files"] as $file)
 
-					<?php /*
+					<?php
 					//echo("<pre>");
 					//print_r($docs);
 					//echo("</pre>");
@@ -236,7 +230,7 @@
 					$filenamearray= explode("/",$file["filepath"]);
 
 					$filename = $filenamearray[count($filenamearray)-1];
-					*/ ?>
+					?>
 					<li class="list-group-item"><a href="#">{{$productData->name}} : {{$filename}}</a></li>
 					@endforeach
 					</ul>
@@ -246,7 +240,7 @@
 
 			  </div>
 			  @endif
-			-->
+
 			   <div class="tab-pane fade" id="diferentiators" role="tabpanel" aria-labelledby="diferentiators-tab" style="padding:30px;background-color:#fafafa;font-size:16px;line-height:24px;">
 			   		<h3 >How can we help ease your purchasing Stress in {{$country}}?</h3>
 

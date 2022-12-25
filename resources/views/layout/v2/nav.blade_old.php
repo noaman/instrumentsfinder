@@ -62,7 +62,7 @@
    <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="height:50px;">
 
     <ul class="navbar-nav ml-auto ">
-      <!-- <li class="nav-item navitem_brand">
+      <li class="nav-item navitem_brand">
         <a href="{{$link_prefix}}/categories">Categories <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item navitem_brand">
@@ -70,7 +70,7 @@
       </li>
       <li class="nav-item navitem_brand">
         <a href="{{$link_prefix}}/applications">Applications</a>
-      </li> -->
+      </li>
       <li class="nav-item navitem_brand cart cartColor" style="width:60px;display:block;text-align: center;vertical-align: middle;margin: auto;">
         <i class="fa fa-shopping-cart fa-0.7x cartColor"></i>
     <span id="itemCount"></span>

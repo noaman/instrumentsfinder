@@ -38,7 +38,7 @@
           </div>
         </div>-->
 
-        <div class="footer-copyright text-center py-3">© 2021 : 
+        <div class="footer-copyright text-center py-3">© 2019 : 
     <a style="color:#999;text-decoration:none"; href="/"> InstrumentsFinder.com</a>
   </div>
 
