@@ -85,8 +85,8 @@ if($segment=="medical"){
 								<?php
 
 
-										$thumbnail = $assetslink.$produclisting->thumb_img_new_path;
-										//$thumbnail="assets/medical/thumb_886000531.jpg";
+										//$thumbnail = $assetslink.$produclisting->thumb_img_new_path;
+										$thumbnail="assets/placeholder_64.png";
 
 								?>
 
