@@ -15,7 +15,7 @@
     if($segment=="medical")
     {
         $faviconPath="medical/";
-        $stylesheetFile ="style_med.css";
+        $stylesheetFile ="style_med1.css";
     }
 ?>
 
