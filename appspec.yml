@@ -9,4 +9,6 @@ file_exists_behavior: OVERWRITE
 hooks:
     BeforeInstall:
         - location: deployscripts/beforeinstall.sh
+    AfterInstall:
+        - location: deployscripts/afterinstall.sh
 
