@@ -226,7 +226,7 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 
         Mail::to('enquiry@agisafety.com')->send(new SendMailable($lead_data));
        // Mail::to('kapadiayusuf@gmail.com')->send(new SendMailable($lead_data));
-        Mail::to('noamankazi79@gmail.com')->send(new SendMailable($lead_data));
+        //Mail::to('noamankazi79@gmail.com')->send(new SendMailable($lead_data));
 
 
         if (Mail::failures()) {
@@ -394,32 +394,32 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 			$shipping_country= $request->input("CountryProductShipsTo");
 
 		$country="";
-		// if(isset($locdata) &&  is_array($locdata) && $locdata["country_name"]!=null)
-		// 	$country=$locdata["country_name"];
+		if(isset($locdata) &&  is_array($locdata) && $locdata["country_name"]!=null)
+			$country=$locdata["country_name"];
 
 		$countrycode="";
-		// if(isset($locdata) &&  is_array($locdata) && $locdata["country_code"]!=null)
-		// 	$country=$locdata["country_code"];
+		if(isset($locdata) &&  is_array($locdata) && $locdata["country_code"]!=null)
+			$country=$locdata["country_code"];
 
 		$countryflag="";
-		// if(isset($locdata) &&  is_array($locdata["location"]) && $locdata["location"]["country_flag"]!=null)
-		// 	$countryflag=$locdata["location"]["country_flag"];
+		if(isset($locdata) &&  is_array($locdata["location"]) && $locdata["location"]["country_flag"]!=null)
+			$countryflag=$locdata["location"]["country_flag"];
 
 		$countryemoji="";
-		// if(isset($locdata) && is_array($locdata["location"]) && $locdata["location"]["country_flag_emoji"]!=null)
-		// 	$countryemoji=$locdata["location"]["country_flag_emoji"];
+		if(isset($locdata) && is_array($locdata["location"]) && $locdata["location"]["country_flag_emoji"]!=null)
+			$countryemoji=$locdata["location"]["country_flag_emoji"];
 
 		$city="";
-		// if(isset($locdata) && is_array($locdata) && $locdata["city"]!=null)
-		// 	$city=$locdata["city"];
+		if(isset($locdata) && is_array($locdata) && $locdata["city"]!=null)
+			$city=$locdata["city"];
 
 		$lat="";
-		// if(isset($locdata) &&  is_array($locdata) && $locdata["latitude"]!=null)
-		// 	$lat=$locdata["latitude"];
+		if(isset($locdata) &&  is_array($locdata) && $locdata["latitude"]!=null)
+			$lat=$locdata["latitude"];
 
 		$lon="";
-		// if(isset($locdata) &&  is_array($locdata) && $locdata["longitude"]!=null)
-		// 	$lon=$locdata["longitude"];
+		if(isset($locdata) &&  is_array($locdata) && $locdata["longitude"]!=null)
+			$lon=$locdata["longitude"];
 
 
 
@@ -484,15 +484,9 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 
 			$finalurl = $json_url.$source_prod_id;
 
-				
+
 			if($segment=="instrumentation"){
-				// try {
-				// 	$data[$key] = json_decode(file_get_contents($finalurl,false,$context),true);
-				// }
-				// catch (Exception $e) {
-				// 	$data[$key] = array();
-				// }
-				$data[$key] = array();
+			$data[$key] = json_decode(file_get_contents($finalurl,false,$context),true);
 			}
 			else	
 				$data[$key] = array();
@@ -642,7 +636,8 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 
 		$options=$productoptions->getProductOptionsByProductID($productid);
 
-		return view('v2.configurator',compact('productData','options'));
+		//return view('v2.configurator',compact('productData','options'));
+		return view('v2.index',compact('productData','options'));
 	}
 
 
@@ -726,13 +721,13 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
     	$brandname = str_replace("-", " ", html_entity_decode($brandname));
     	$brandname = str_replace("~", "/", html_entity_decode($brandname));
 
-    		$categorymaster = new category_master;
+    	$categorymaster = new category_master;
     		$applicationsmaster= new applications_master;
 
 
     		$productmaster = new products_master;
     		$productlistings = $productmaster->getProductsByBrandName($brandname,$category_slug);
-			
+
     		$prod_id_array=array();
     		foreach($productlistings  as $productlisting)
     		{
@@ -744,9 +739,8 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
     		$type="brands";
 
     		$header=$brandname;
-			
-    		#$catlisting =$productmaster->getCatIDsByBrand($brandname);
-			$catlisting=[];
+
+    		$catlisting =$productmaster->getCatIDsByBrand($brandname);
     		//print_r($catlist);
 
     		return view('v2.productlisting',compact('productlistings','applicationsblock','catlisting','brandname','type','header'));
@@ -780,8 +774,8 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
     		$applicationnamearray=$applicationsmaster->getApplicationBySlug($application_slug);
 
     		$header=$applicationnamearray["name"];
-    		// $catlisting =$productmaster->getCatIDsByAppSlug($application_slug);
-			$catlisting=[];		
+    		$catlisting =$productmaster->getCatIDsByAppSlug($application_slug);
+
     		return view('v2.productlisting',compact('productlistings','catlisting','type','header'));
 
     }

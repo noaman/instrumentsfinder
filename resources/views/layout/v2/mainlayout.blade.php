@@ -5,22 +5,6 @@
     <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
   <head>
-      <style>
-          .flotingbar {
-            background:#ffffe0; 
-            padding:6px; padding-left:8px;
-            margin-right:3px;
-            border:1px solid #cccccc;
-            z-index: 999999;
-    
-    display:block;
-position:fixed;
-float:right;
-bottom:60px;
-right:10px;
-    
-}
-      </style>
 <meta name="google-site-verification" content="omHqJAAMCxy8mUBibcZSN7CIfsiVwFi_bB1oKcfEIVo" />
 <meta name="yandex-verification" content="a0367cdacd50107b" />
 <link rel="stylesheet" href="/v2/bootstrap.min.css">
@@ -1095,15 +1079,15 @@ return new Promise(function (resolve, reject) {
 
 
                 cart_checkout_html+='<tr>';
-
-                if(options.length>0)
-                {
-                    cart_checkout_html+='<td><img src="'+img+'"></td><td>'+pname+'<br/><a href="#collapse'+pid+'" data-toggle="collapse">view configuration</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#" class="editconf" pid="'+pid+'">edit configuration</a> </td>';
-                }
-                else
-                {
+                //Edied by Yusuf -  removal of configurator
+                //if(options.length>0)
+                //{
+                //    cart_checkout_html+='<td><img src="'+img+'"></td><td>'+pname+'<br/><a href="#collapse'+pid+'" data-toggle="collapse">view configuration</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#" class="editconf" pid="'+pid+'">edit configuration</a> </td>';
+                //}
+                //else
+                //{
                     cart_checkout_html+='<td><img src="'+img+'"></td><td>'+pname+'</td>';
-                }
+                //}
 
 
 

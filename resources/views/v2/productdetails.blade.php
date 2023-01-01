@@ -95,21 +95,11 @@
 						<div class="col-md-5 col-sm-6" style="display:block;margin-left:auto;margin-right:auto;margin-top:50px;">
 
 
-
-
-
-							@if(isset($options) && is_array($options) && count($options)>0)
-						<a href="{{$link_prefix}}/configurator/{{$productData->prod_id}}"><img src="{{$assetslink.$img}}" style="width:80%" alt="{{$productData->name}}|{{$productData->brand}}|{{$country}}" title="{{$productData->name}}" data-caption="{{$productData->name}}|{{$productData->brand}}|{{$country}}"></a>
-					@else
-
 					<button type="button" class="btn_cartload btn">
-						<img src="{{$assetslink.$img}}" style="width:80%" alt="{{$productData->name}}|{{$productData->brand}}|{{$country}}" title="{{$productData->name}}" data-caption="{{$productData->name}}|{{$productData->brand}}|{{$country}}">
+						<!--<img src="{{$assetslink.$img}}" style="width:80%" alt="{{$productData->name}}|{{$productData->brand}}|{{$country}}" title="{{$productData->name}}" data-caption="{{$productData->name}}|{{$productData->brand}}|{{$country}}"> -->
+						<img src="/assets/placeholder.jpg" style="width:80%" alt="{{$productData->name}}|{{$productData->brand}}|{{$country}}" title="{{$productData->name}}" data-caption="{{$productData->name}}|{{$productData->brand}}|{{$country}}">
 
 					</button>
-
-
-					@endif
-
 
 
 
@@ -120,7 +110,7 @@
 								<br/><br/>
 								{!!$productData->short_desc!!}</h2>
 							</p>
-							<div>{!!$productData->features!!}</div>
+							<!--<div>{!!$productData->features!!}</div> -->
 						</div>
 					</div>
 
@@ -129,39 +119,15 @@
 
 
 					<ul class="list-group">
-						<li class="list-group-item">Resellers of <div class="brand"><a href="/brand/{{$data->create_slug($productData->brand)}}" style="color:#Adc900;">{{$productData->brand}} in {{$country}}</a></div></li>
+						<li class="list-group-item">Resellers of <div class="brand"><a href="/brand/{{$data->create_slug($productData->brand)}}" style="color:#Adc900;">{{$productData->brand}} supplier {{$country}}</a></div></li>
 
 						<li class="list-group-item" style="padding-top: 2px;padding-bottom: 2px;">Availability <p style="color:#aaa;padding-top: 2px;padding-bottom:2px;">Please Click "Check Price Now" to get the latest Stock Status for {{$productData->name}} for {{$country}}</p></li>
 					</ul>
 					<hr/>
-					<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-					<!-- /*
-					@if(isset($options) && is_array($options) && count($options)>0)
-						<a href="{{$link_prefix}}/configurator/{{$productData->prod_id}}"><button type="button" class="btn btn-brand"><span class="small">Configure Product Options &<br/></span> CHECK PRICE NOW</button></a>
-					@else 
-					 */ -->
-
+					
 					<button type="button" class="btn_cartload btn btn-brand">CHECK PRICE NOW</button>
 
-  					<!--
-					@endif
-					
-
-					@if(isset($options) && is_array($options) && count($options)>0)
-
-					<div style="margin-top:20px;width:100%;border-top:solid #fdd700 1px;padding:10px;padding-top: 2px;padding-bottom: 2px;">
-					<b >The product has following configurable options </b><br/>
-					<ul class="list-group list-group-flush" style="margin-top:15px;">
-					@foreach($options as $option)
-
-                    @if($option['options_desc']!="block")
-                    <li class="list-group-item" style="padding-top: 2px;padding-bottom: 2px;font-size:12px;">{{$option['options_desc']}}</li>
-                    @endif
-
-                    @endforeach
-                	</ul>
-                	</div>
-                	@endif -->
+  					
 				</div>
 			</div>
 
@@ -178,15 +144,7 @@
 			    <a class="nav-link tabheader" id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="features" aria-selected="false">Description</a>
 			  </li>
 			  	@endif
-  			<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-					<!-- /*
-			  	@if(isset($docs) && $docs!=null && is_array($docs))
-			  <li class="nav-item">
-			    <a class="nav-link active tabheader" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="true">Documents</a>
-			  </li>
-			  @endif 
-			*/ -->
-			  <li class="nav-item">
+  			  <li class="nav-item">
 			    <a class="nav-link tabheader" id="diferentiators-tab" data-toggle="tab" href="#diferentiators" role="tab" aria-controls="diferentiators" aria-selected="false">Our Differentiators</a>
 			  </li>
 
@@ -194,7 +152,7 @@
 			</ul>
 			<div class="tab-content" id="myTabContent">
 			  @if($productData->long_desc!="")
-			  <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="home-tab" style="padding:30px;background-color:#fafafa;"><!--{!!$productData->long_desc!!}-->
+			  <div class="tab-pane fade show active" id="features" role="tabpanel" aria-labelledby="home-tab" style="padding:30px;background-color:#fafafa;"><!--{!!$productData->long_desc!!}-->
 				@if(count($category_array)>0)
 			  	<h3>Why buy {{$brand}} {{$category_array[0]["name"]}} in {{$country}} from us? </h3>
 				  @endif
@@ -217,36 +175,6 @@
 
 			  </div>
 			  @endif
-  			<!-- Edited by Yusuf #Kachra removed configurator link from product detail view -->
-			<!--
-			  @if(isset($docs) && $docs!=null && is_array($docs))
-			  <div class="tab-pane fade show active" id="documents" role="tabpanel"
-			  aria-labelledby="profile-tab" style="padding:30px;background-color:#fafafa;">
-					@foreach($docs as $doc)
-
-					<h6>{{$doc['doc_group_title']}}</h6><br/>
-					<ul class="list-group">
-					@foreach($doc["files"] as $file)
-
-					<?php /*
-					//echo("<pre>");
-					//print_r($docs);
-					//echo("</pre>");
-
-					$filenamearray= explode("/",$file["filepath"]);
-
-					$filename = $filenamearray[count($filenamearray)-1];
-					*/ ?>
-					<li class="list-group-item"><a href="#">{{$productData->name}} : {{$filename}}</a></li>
-					@endforeach
-					</ul>
-					<br/>
-
-					@endforeach
-
-			  </div>
-			  @endif
-			-->
 			   <div class="tab-pane fade" id="diferentiators" role="tabpanel" aria-labelledby="diferentiators-tab" style="padding:30px;background-color:#fafafa;font-size:16px;line-height:24px;">
 			   		<h3 >How can we help ease your purchasing Stress in {{$country}}?</h3>
 
@@ -258,23 +186,23 @@
 					<h3>We Are Dedicated to Making Your Working Life Easier</h3>
 
 					<ul>
-<li>No minimum order value for {{$country}}</li>
-<li>Vendor reduction – our one-stop-shop service for {{$country}} is designed to meet all your needs whether you are in big cities like {{implode(", ",$cities)}} and all other cities for {{$country}}</li>
-<li>We maximize your order efficiency through our multiple order channels;</li>
-<li>We offer you special customized offers and promotions;</li>
-<li>We lower your purchasing costs with quantity breaks and volume discounts for our customers in {{$country}} for all brands including {{$brand}} and especially for {{$productData->name}} for supplies in {{implode(", ",$cities)}}</li>
-<li>We can convert most of our competitor’s part numbers to our product codes and get you the exact match or direct replacement.</li>
-</ul>
-<hr/>
-<h3>Save time – allow us to help your work more efficiently</h3>
-<ul>
-<li>Convenient single source saves your time searching for products;</li>
-<li>We reduce your process down-time with immediate ex-stock availability in {{$country}} for various brands including {{$brand}} and best resller prices for {{$productData->name}} in {{$country}} - {{implode(", ",$cities)}}</li>
-<li>We deliver what you need faster by using the world’s leading express carriers and are able to provide door to door services across {{$country}}</li>
-<li>Reduced administration and paperwork;</li>
-<li>We help you to plan your inventory requirements with scheduled ordering;</li>
-<li>We offer convenience and simplicity in a complex world.</li>
-</ul>
+						<li>No minimum order value for {{$country}}</li>
+						<li>Vendor reduction – our one-stop-shop service for {{$country}} is designed to meet all your needs whether you are in big cities like {{implode(", ",$cities)}} and all other cities for {{$country}}</li>
+						<li>We maximize your order efficiency through our multiple order channels;</li>
+						<li>We offer you special customized offers and promotions;</li>
+						<li>We lower your purchasing costs with quantity breaks and volume discounts for our customers in {{$country}} for all brands including {{$brand}} and especially for {{$productData->name}} for supplies in {{implode(", ",$cities)}}</li>
+						<li>We can convert most of our competitor’s part numbers to our product codes and get you the exact match or direct replacement.</li>
+					</ul>
+						<hr/>
+						<h3>Save time – allow us to help your work more efficiently</h3>
+					<ul>
+						<li>Convenient single source saves your time searching for products;</li>
+						<li>We reduce your process down-time with immediate ex-stock availability in {{$country}} for various brands including {{$brand}} and best resller prices for {{$productData->name}} in {{$country}} - {{implode(", ",$cities)}}</li>
+						<li>We deliver what you need faster by using the world’s leading express carriers and are able to provide door to door services across {{$country}}</li>
+						<li>Reduced administration and paperwork;</li>
+						<li>We help you to plan your inventory requirements with scheduled ordering;</li>
+						<li>We offer convenience and simplicity in a complex world.</li>
+					</ul>
 
 			   </div>
 

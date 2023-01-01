@@ -292,7 +292,8 @@ $sublink=$link_prefix.$sublink;
 
 						<div class="row">
 							<div class="col-md-2 col-sm-3">
-								<img src="{{$assetslink.$thumbnail}}" alt="{{$productlisting->name}}|{{$productlisting->brand}}" title="{{$productlisting->name}}" data-caption="{{$productlisting->name}}|{{$productlisting->brand}}">
+							<img src="/assets/placeholder_64.png" alt="{{$productlisting->name}}|{{$productlisting->brand}}" title="{{$productlisting->name}}" data-caption="{{$productlisting->name}}|{{$productlisting->brand}}">								
+							<!--<img src="{{$assetslink.$thumbnail}}" alt="{{$productlisting->name}}|{{$productlisting->brand}}" title="{{$productlisting->name}}" data-caption="{{$productlisting->name}}|{{$productlisting->brand}}"> -->
 							</div>
 							<div class="col-md-8 col-sm-4">
 								<h2 style="font-size:1.5em;"><a href="{{$link_prefix}}/product/{{$productlisting->prod_id}}/{{$prodslug}}">{{$productlisting->name}} </a></h2>
