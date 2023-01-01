@@ -4,6 +4,7 @@ files:
   - source: /
     destination: /var/www/instrumentsfinder
     owner: ubuntu
+    overwrite: true
 file_exists_behavior: OVERWRITE
 hooks:
     AfterInstall:
