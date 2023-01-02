@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/instrumentsfinder1
+    destination: /var/www/instrumentsfinder
     owner: ubuntu
     overwrite: true
 file_exists_behavior: OVERWRITE
