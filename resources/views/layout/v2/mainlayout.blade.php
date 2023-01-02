@@ -4,6 +4,7 @@
     ?>
     <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <!--Testing pipeline-->
   <head>
 <meta name="google-site-verification" content="omHqJAAMCxy8mUBibcZSN7CIfsiVwFi_bB1oKcfEIVo" />
 <meta name="yandex-verification" content="a0367cdacd50107b" />

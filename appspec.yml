@@ -4,8 +4,11 @@ files:
   - source: /
     destination: /var/www/instrumentsfinder1
     owner: ubuntu
+    overwrite: true
 file_exists_behavior: OVERWRITE
 hooks:
+    BeforeInstall:
+        - location: deployscripts/beforeinstall.sh
     AfterInstall:
         - location: deployscripts/afterinstall.sh
 
