@@ -65,7 +65,7 @@ $sublink=$link_prefix.$sublink;
 
 
 
-<div class="container">
+<div class="container-fluid">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb breadcrumb_brand">
 

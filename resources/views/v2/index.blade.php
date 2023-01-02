@@ -21,7 +21,7 @@ if($segment=="medical"){
 }
 ?>
 
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row" style="min-height:450px;">
 		<div class="col-md-6 col-sm-6" style="display:block;margin:auto;padding:50px;">
@@ -29,13 +29,13 @@ if($segment=="medical"){
 			if($segment=="medical")
 			{
 				?>
-				<h2 style="font-size:1.3em">Are you searching for Medical  instruments?</h2><br/>
+				<h1>Are you searching for Medical  instruments?</h1><br/>
 				<p>Then InstrumentFinder is the right place. Our experienced technical staff will help you find the right product for your need</p>
 				<?php
 			}
 			else{
 			?>
-			<h2 style="font-size:1.3em">Are you searching for Industrial Laboratory instruments?</h2><br/>
+			<h1>Are you searching for Industrial Laboratory instruments?</h1><br/>
 			<p>Then InstrumentFinder is the right place. Our experienced technical staff will help you find the right product for your need</p>
 			<?php }?>
 		</div>
@@ -51,21 +51,21 @@ if($segment=="medical"){
 	</div>
 	<div class="row" style="margin:10px;">
 		<div class="col-sm-12" style="padding:10px;">
-			<h1>Featured products - {{$country}}</h1>
+			<h2>Featured products - {{$country}}</h2><hr>
 				<?php
 			if($segment=="medical")
 			{
 				?>
-				We are a leading suppliers for Medical in {{$country}} across {{implode(", ",$cities)}}
+				<p>We are a leading suppliers for Medical in {{$country}} across {{implode(", ",$cities)}} </p>
 				<?php
 			}
 			else{
 			?>
-			We are a leading suppliers for Oilfield Safety and Fire Protection Equipment, Process Instrumentation, Electrical and Mechanical machinery equipments & spare parts, Laboratory Measurement Tools & Equipments & Surgical / Medical Emergency Products for Oil & Gas Industry in {{$country}} across {{implode(", ",$cities)}}
+			<p>We are a leading suppliers for Oilfield Safety and Fire Protection Equipment, Process Instrumentation, Electrical and Mechanical machinery equipments & spare parts, Laboratory Measurement Tools & Equipments & Surgical / Medical Emergency Products for Oil & Gas Industry in {{$country}} across {{implode(", ",$cities)}}</p>
 <?php }?>
 
 			
-
+		<hr>
 
 		</div>
 	</div>
@@ -95,7 +95,7 @@ if($segment=="medical"){
 							</div>
 							<div class="col-md-8 col-sm-4">
 
-								<h3 style="font-size:1.5em;"><a href="{{$link_prefix}}/product/{{$produclisting->prod_id}}/{{$prodslug}}">{{$produclisting->name}} </a></h2>
+								<h3 style="font-size:1.5em;"><a href="{{$link_prefix}}/product/{{$produclisting->prod_id}}/{{$prodslug}}">{{$produclisting->name}} </a></h3>
 								<div class="brand subtext"><a href="{{$link_prefix}}/brand/{{$data->create_slug($produclisting->brand)}}">
 								{{$produclisting->brand}} in {{$country}} (as resellers) </a></div>
 								<h5 class="h3_desc">{{$produclisting->short_desc}}</h3>
@@ -112,7 +112,7 @@ if($segment=="medical"){
 	@if(isset($brands_array))
 	<div class="row" style="margin:10px;">
 		<div class="col-12" style="padding:10px;">
-			<h1>Featured brands - {{$country}}</h1>
+			<h2>Featured brands - {{$country}}</h2>
 		</div>
 			@foreach($brands_array as $brand)
 			<div class="col-md-4 col-sm-12 catblockmaster">

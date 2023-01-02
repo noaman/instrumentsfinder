@@ -47,7 +47,7 @@ if(isset($type))
 	$pageDesc = $dt["pageDesc"];
 @endphp
 
-<div class="container">
+<div class="container-fluid">
 		<div class="jumbotron_brand">
 		    <div class="overlay"></div>
 		    <div class="inner">
