@@ -105,10 +105,10 @@
 
 						</div>
 						<div class="col-md-7 col-sm-6" style="padding:40px;">
-							<h2 style="font-size:1.15em;"><p>
-								We are the trusted suppliers for {{$productData->brand}} in {{$country}} across {{implode(", ",$cities)}}
+							
+								<p>We are the trusted suppliers for {{$productData->brand}} in {{$country}} across {{implode(", ",$cities)}}
 								<br/><br/>
-								{!!$productData->short_desc!!}</h2>
+								{!!$productData->short_desc!!}</p>
 							</p>
 							<!--<div>{!!$productData->features!!}</div> -->
 						</div>
@@ -119,9 +119,9 @@
 
 
 					<ul class="list-group">
-						<li class="list-group-item">Resellers of <div class="brand"><a href="/brand/{{$data->create_slug($productData->brand)}}" style="color:#Adc900;">{{$productData->brand}} supplier {{$country}}</a></div></li>
+						<li class="list-group-item">Resellers of <div class="brand"><a href="/brand/{{$data->create_slug($productData->brand)}}" >{{$productData->brand}} supplier {{$country}}</a></div></li>
 
-						<li class="list-group-item" style="padding-top: 2px;padding-bottom: 2px;">Availability <p style="color:#aaa;padding-top: 2px;padding-bottom:2px;">Please Click "Check Price Now" to get the latest Stock Status for {{$productData->name}} for {{$country}}</p></li>
+						<li class="list-group-item" style="padding-top: 2px;padding-bottom: 2px;">Availability <p>Please Click "Check Price Now" to get the latest Stock Status for {{$productData->name}} for {{$country}}</p></li>
 					</ul>
 					<hr/>
 					
@@ -152,30 +152,30 @@
 			</ul>
 			<div class="tab-content" id="myTabContent">
 			  @if($productData->long_desc!="")
-			  <div class="tab-pane fade show active" id="features" role="tabpanel" aria-labelledby="home-tab" style="padding:30px;background-color:#fafafa;"><!--{!!$productData->long_desc!!}-->
+			  <div class="tab-pane fade show active" id="features" role="tabpanel" aria-labelledby="home-tab" style="padding:30px;border:dotted #fed700 2px;"><!--{!!$productData->long_desc!!}-->
 				@if(count($category_array)>0)
 			  	<h3>Why buy {{$brand}} {{$category_array[0]["name"]}} in {{$country}} from us? </h3>
 				  @endif
-			  	<h4>
+			  	<p>
 			  		Especially the {{$productData->name}} in {{$country}}- {{implode(", ",$cities)}}
-			  	</h4>
-			  	<ul style="font-size:16px;line-height: 20px;">
+				</p>
+			  	<ul style="font-size:20px;line-height: 1.5em font-weight:300;">
 
 				  @if(count($category_array)>0)
-			  	<li class="list-group-item1"> Preferred Vendor &amp; and premium reseller for the world?s best and most reputed brands including {{$brand}} for <strong>{{$category_array[0]["name"]}}</strong> in {{$country}} </li>
+			  	<li class="list-group-item1"> <p>Preferred Vendor &amp; and premium reseller for the world?s best and most reputed brands including {{$brand}} for <strong>{{$category_array[0]["name"]}}</strong> in {{$country}} </p></li>
 
-			  	<li class="list-group-item1"> Best prices for <strong>{{$productData->name}} </strong>and all {{$category_array[0]["name"]}} in {{$country}} and its accessories with 100% guarantee.</li>
+			  	<li class="list-group-item1"> <p>Best prices for <strong>{{$productData->name}} </strong>and all {{$category_array[0]["name"]}} in {{$country}} and its accessories with 100% guarantee.</p></li>
 					@endif
-			  	<li class="list-group-item1">24 x 7 Service and support with periodic maintenance.</li>
+			  	<li class="list-group-item1"><p>24 x 7 Service and support with periodic maintenance.</p></li>
 
-			  	<li class="list-group-item1">Same day delivery at your doorstep throughout {{$country}} along with door-to-door service across {{implode(", ",$cities)}}</li>
+			  	<li class="list-group-item1"><p>Same day delivery at your doorstep throughout {{$country}} along with door-to-door service across {{implode(", ",$cities)}}</p></li>
 
-			  	<li class="list-group-item1">Large stocks locally available with fresh manufacturing date and full manufacturers warranty.</li>
+			  	<li class="list-group-item1"><p>Large stocks locally available with fresh manufacturing date and full manufacturers warranty.</p></li>
 			  </ul>
 
 			  </div>
 			  @endif
-			   <div class="tab-pane fade" id="diferentiators" role="tabpanel" aria-labelledby="diferentiators-tab" style="padding:30px;background-color:#fafafa;font-size:16px;line-height:24px;">
+			   <div class="tab-pane fade" id="diferentiators" role="tabpanel" aria-labelledby="diferentiators-tab" style="padding:30px;border:dotted #fed700 2px;">
 			   		<h3 >How can we help ease your purchasing Stress in {{$country}}?</h3>
 
 			   		<p class="text-justify">We at <strong>InstrumentsFinder.com </strong>,{{$country}} are a leading suppliers for Oilfield Safety and Fire Protection Equipment, Workplace Safety &amp; Personal Protection Equipment (PPE), Process Instrumentation, Electrical and Mechanical machinery equipments &amp; spare parts, Laboratory Measurement Tools &amp; Equipments &amp; Surgical / Medical Emergency Products for all Industries in {{$country}} across {{implode(", ",$cities)}}</p>

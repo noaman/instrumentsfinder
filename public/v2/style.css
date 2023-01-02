@@ -45,10 +45,10 @@ h2
 
 p
 {
-	padding-top: 1.3em;
+	padding-top: 1em;
 	font-size: 1.1em;
-	line-height: 1.3em;
-	padding-bottom: 1.3em;
+	line-height: 1.5em;
+	padding-bottom: 1em;
 }
 
 .list-group-item1
@@ -142,7 +142,7 @@ p
 
 .catblockmaster :hover {
   background-color:#fed700;
-
+  color:#1C1E21;
 }
 
 .navitem_brand
@@ -177,7 +177,7 @@ p
 
 .navitem_brand a:hover
 {
-	color:#ffffff;
+	color:#1C1E21;
 }
 
 .prodlistingblock a
@@ -202,7 +202,7 @@ p
 	padding-top:10px;
 	padding-bottom:10px;
 
-	font-size:12px;
+	font-size:0.9em;
 	font-weight:600;
 }
 
@@ -258,6 +258,14 @@ p
 	padding:5px;
 	margin-bottom:8px;
 	width:100%;
+	border:dotted #fed700 1px;
+	letter-spacing: 0.6px;
+	margin:5px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+
 
 }
 
@@ -268,15 +276,17 @@ p
 
 	color:#fed700;
 	font-weight: 300;
-	font-size:13px;
+	font-size:0.9em;
+	margin-bottom:1.5em;
 }
 
 .brand a
 {
 
-	color:#fed700;
+	color:#1C1E21;
 	font-weight: 300;
-	font-size:13px;
+	font-size:0.9em;
+	margin-bottom:1.5em;
 }
 
 .productlist a
@@ -286,7 +296,7 @@ p
 
 .productist p
 {
-	color:#ccc;
+	color: #D9D9D9;
 }
 
 .productlist img
@@ -393,7 +403,7 @@ input::placeholder { color: #D9D9D9; font-size: 0.9em; letter-spacing:0.5px;  pa
 	overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url("/img/homebg.jpg");
+    background-image: url("/img/instruments.png");
 }
 
 .btn-brand:hover
