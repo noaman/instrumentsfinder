@@ -5,12 +5,12 @@
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Lexend%20Deca');
 
 
 body
 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Lexend Deca', sans-serif;
 	font-display: auto;
 	color:#D9D9D9;
 	background-color: #eee;
@@ -21,9 +21,9 @@ body
 
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Lexend Deca';
   font-display: auto;
-  src: local('Poppins'), url(https://fonts.googleapis.com/css?family=Poppins) format('ttf');
+  src: local('Lexend Deca'), url(https://fonts.googleapis.com/css?family=Lexend Deca) format('ttf');
 }
 
 
