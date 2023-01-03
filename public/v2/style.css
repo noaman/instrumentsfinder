@@ -45,12 +45,21 @@ h2
 
 p
 {
-	padding-top: 1em;
+	padding-top: 0.9em;
 	font-size: 1.1em;
 	line-height: 1.5em;
-	padding-bottom: 1em;
+	padding-bottom: 0.9em;
 }
 
+.flotingbar
+{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	margin: 0;
+	background-color: #444;
+
+}
 .list-group-item1
 {
 	font-size: 16px;
