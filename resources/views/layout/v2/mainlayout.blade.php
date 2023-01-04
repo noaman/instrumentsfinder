@@ -16,7 +16,7 @@
     if($segment=="medical")
     {
         $faviconPath="medical/";
-        $stylesheetFile ="style_med1.css";
+        $stylesheetFile ="style.css";
     }
 ?>
 
@@ -108,7 +108,7 @@ $isProductPage=in_array("product",$url_array,TRUE);
     //if(count($url_array)==1)//INDEXPAGE
     if($page=="index")
     {
-        if($segment=="medicla")
+        if($segment=="medical")
         {
             $title="Medical Instruments | $country | ".implode(", ",$cities);
             $metadescription="Shop InstrumentsFinder for the best in test & measurement instruments in $country. InstrumentsFinder carries over 100 brands of industrial instruments and supports customers with free lifetime technical support from its staff of Applications Engineers.";

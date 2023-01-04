@@ -19,9 +19,9 @@
 
   <div class="row">
     <div class="col-6 col-sm-6">
-      <a href="{{$homeLink}}"><img class="logo_place" src="/img/<?=$logo?>" style="width:250px;"></a>
+      <a href="{{$homeLink}}"><img class="logo_place hidden-on-mobile" src="/img/<?=$logo?>" style="width:250px;height:auto;"></a>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 hidden-on-mobile">
       <p style="background:#ffffe0; padding:3px; padding-left:20px;float:right; width:300;border:1px #cccsolid;">
       <Email class="small">Mobile/<a href="https://wa.me/+971556305217?text=HI%2C%20I%20am%20visiting%20from%20instrumentsfinder.com%2C%20can%20you%20help%20with%20my%20product%20query%0A">Whatsapp</a> : <a href="tel:+971556305217">+971556305217</a>
       <br>Email : <a href="mailto:instrumentsfinder@gmail.com">instrumentsfinder@gmail.com</a></p>

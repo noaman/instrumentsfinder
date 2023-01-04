@@ -166,7 +166,7 @@ $sublink=$link_prefix.$sublink;
 <a href="{{$link_prefix}}/brand/{{$header}}">{{$header}}</a> manufactures {!!$cat_string!!} and many more products. {{$header}} delivers high quality instrumentation products and has a reputation as one of the top manufacturers of test and measurment instruments.<br/>
 
 @php
-						 $metadescription="We are the trusted suppliers for {$header} in $country across ".implode(", ",$cities);
+						 $metadescription="Trusted suppliers for {$header} in $country across ".implode(", ",$cities);
 
 						@endphp
 						{{$metadescription}}<br/><br/>
@@ -181,7 +181,7 @@ $sublink=$link_prefix.$sublink;
 						<h1 class="h1_productheader">{{$header}} - {{$country}}</h1>
 
 						@php
-						 $metadescription="We are the trusted suppliers for $header across $country ".implode(", ",$cities);
+						 $metadescription="Trusted suppliers for $header across $country ".implode(", ",$cities);
 
 						@endphp
 						{{$metadescription}}<br/><br/>
@@ -224,7 +224,7 @@ $sublink=$link_prefix.$sublink;
 						<h1 class="h1_productheader">{{$header}} - {{$country}}</h1>
 
 						@php
-						 $metadescription="We are the trusted suppliers for ".$cat_string." across $country ".implode(", ",$cities);
+						 $metadescription="Trusted suppliers for ".$cat_string." across $country ".implode(", ",$cities);
 
 						@endphp
 						{{$metadescription}}<br/><br/>

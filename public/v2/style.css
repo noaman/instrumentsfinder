@@ -97,7 +97,12 @@ p
 		}
 	}
 
-
+@media (max-width: 600px) {
+	.hidden-on-mobile {
+	  display: none;
+	}
+  	}
+	  
 .jumbotron_brand {
 	padding:20px;
 	color:#333E48;

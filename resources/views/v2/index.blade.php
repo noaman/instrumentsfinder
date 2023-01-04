@@ -56,12 +56,12 @@ if($segment=="medical"){
 			if($segment=="medical")
 			{
 				?>
-				<p>We are a leading suppliers for Medical in {{$country}} across {{implode(", ",$cities)}} </p>
+				<p>Leading suppliers for Medical in {{$country}} across {{implode(", ",$cities)}} </p>
 				<?php
 			}
 			else{
 			?>
-			<p>We are a leading suppliers for Oilfield Safety and Fire Protection Equipment, Process Instrumentation, Electrical and Mechanical machinery equipments & spare parts, Laboratory Measurement Tools & Equipments & Surgical / Medical Emergency Products for Oil & Gas Industry in {{$country}} across {{implode(", ",$cities)}}</p>
+			<p>Leading suppliers for Oilfield Safety and Fire Protection Equipment, Process Instrumentation, Electrical and Mechanical machinery equipments & spare parts, Laboratory Measurement Tools & Equipments & Surgical / Medical Emergency Products for Oil & Gas Industry in {{$country}} across {{implode(", ",$cities)}}</p>
 <?php }?>
 
 			
