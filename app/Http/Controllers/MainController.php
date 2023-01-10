@@ -378,7 +378,7 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 		//$ip_addres="http://api.ipstack.com/94.200.28.38?access_key=3cf453a7e01668f433270f0f51956f1b";
 
 
-		// $json_url="https://www.instrumart.com/products/configuratorjson/";
+		//$json_url="https://www.instrumart.com/products/configuratorjson/";
 
 		// $locapiurl='http://api.ipstack.com/'.$ip_addres.'?access_key=3cf453a7e01668f433270f0f51956f1b';
 
@@ -512,22 +512,22 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 
 			$source_prod_id = $prod_data->source_prod_id;
 
-			$finalurl = $json_url.$source_prod_id;
+			// $finalurl = $json_url.$source_prod_id;
 
 
-			if($segment=="instrumentation"){
-			$data[$key] = json_decode(file_get_contents($finalurl,false,$context),true);
-			}
-			else	
+			// if($segment=="instrumentation"){
+			// $data[$key] = json_decode(file_get_contents($finalurl,false,$context),true);
+			// }
+			// else	
 				$data[$key] = array();
 
 			$listing_price = 0;
-			if(is_array($data) && isset($data[$key]["listPrice"]))
-				$listing_price = $data[$key]["listPrice"];
+			// if(is_array($data) && isset($data[$key]["listPrice"]))
+			// 	$listing_price = $data[$key]["listPrice"];
 
 			$discount = 0;
-			if(is_array($data) && isset($data[$key]["discount"]))
-				$discount = $data[$key]["discount"];
+			// if(is_array($data) && isset($data[$key]["discount"]))
+			// 	$discount = $data[$key]["discount"];
 
 
 			$products_data_to_add[$array_index]["product_base_price"]=$listing_price;
