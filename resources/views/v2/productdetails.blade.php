@@ -110,7 +110,7 @@
 								<br/><br/>
 								{!!$productData->short_desc!!}</p>
 							</p>
-							<!--<div>{!!$productData->features!!}</div> -->
+							<div>{!!$productData->features!!}</div>
 						</div>
 					</div>
 
