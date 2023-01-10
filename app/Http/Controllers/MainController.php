@@ -321,62 +321,18 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 	}
 
 
-
-
-
-
-	public function submitLead(Request $request)
+	public function submitEmail(Request $request)
 	{
 
 
 		$subdomain = resolve('subdomain');
 		$segment = resolve('segment');
-		
-		$lead_model = new leads;
-		$lead_prod_model = new lead_products;
-		$lead_opt_model = new lead_options;
-
-		$ip_addres = $request->ip();
-
-		//$ip_addres="83.110.239.78";
-
-		//$ip_addres = $this->getIp();
 		$productmaster = new products_master;
-
-		//for testing
-
-		//$ip_addres="http://api.ipstack.com/94.200.28.38?access_key=3cf453a7e01668f433270f0f51956f1b";
-
-
-		$json_url="https://www.instrumart.com/products/configuratorjson/";
-
-		$locapiurl='http://api.ipstack.com/'.$ip_addres.'?access_key=3cf453a7e01668f433270f0f51956f1b';
-
-
-		$context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
-
-
-
-
-		$locdata = json_decode(file_get_contents($locapiurl,false,$context),true);
-
-		//print_r($locdata);
-
-		//$loc = geoip('232.223.11.11');
 		$inquiry_description="";
 		$email="";
 		$shipping_country="";
 		$resellerpricing='N';
 		$bulkpricing='N';
-
-		/*foreach($request->input() as $k=>$v)
-		{
-			echo("key ".$k);
-			echo("<br/>");
-		}
-		*/
-		if($request->input("CountryProductShipsTo")!=null)
-			$email= $request->input("CountryProductShipsTo");
 
 		if($request->input("inquiryDescription")!=null)
 			$inquiry_description= $request->input("inquiryDescription");
@@ -393,33 +349,107 @@ public function siteMapGenerate(Request $request,$param1,$param2,$param3=null,$p
 		if($request->input("CountryProductShipsTo")!=null)
 			$shipping_country= $request->input("CountryProductShipsTo");
 
+
+
+	}
+
+
+
+	public function submitLead(Request $request)
+	{
+
+
+		$subdomain = resolve('subdomain');
+		$segment = resolve('segment');
+		
+		$lead_model = new leads;
+		$lead_prod_model = new lead_products;
+		$lead_opt_model = new lead_options;
+
+		// $ip_addres = $request->ip();
+
+		//$ip_addres="83.110.239.78";
+
+		//$ip_addres = $this->getIp();
+		$productmaster = new products_master;
+
+		//for testing
+
+		//$ip_addres="http://api.ipstack.com/94.200.28.38?access_key=3cf453a7e01668f433270f0f51956f1b";
+
+
+		// $json_url="https://www.instrumart.com/products/configuratorjson/";
+
+		// $locapiurl='http://api.ipstack.com/'.$ip_addres.'?access_key=3cf453a7e01668f433270f0f51956f1b';
+
+
+		// $context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
+
+
+
+
+		// $locdata = json_decode(file_get_contents($locapiurl,false,$context),true);
+
+		//print_r($locdata);
+
+		//$loc = geoip('232.223.11.11');
+		$inquiry_description="";
+		$email="";
+		$shipping_country="";
+		$resellerpricing='N';
+		$bulkpricing='N';
+
+		/*foreach($request->input() as $k=>$v)
+		{
+			echo("key ".$k);
+			echo("<br/>");
+		}
+		*/
+		/* if($request->input("CountryProductShipsTo")!=null)
+			$email= $request->input("CountryProductShipsTo");
+ 		*/
+		if($request->input("inquiryDescription")!=null)
+			$inquiry_description= $request->input("inquiryDescription");
+
+		if($request->input("email")!=null)
+			$email= $request->input("email");
+
+		if($request->input("resellerpricing")!=null)
+			$resellerpricing= 'Y';
+
+		if($request->input("bulkpricing")!=null)
+			$bulkpricing= 'Y';
+
+		if($request->input("CountryProductShipsTo")!=null)
+			$shipping_country= $request->input("CountryProductShipsTo");
+
 		$country="";
-		if(isset($locdata) &&  is_array($locdata) && $locdata["country_name"]!=null)
-			$country=$locdata["country_name"];
+		// if(isset($locdata) &&  is_array($locdata) && $locdata["country_name"]!=null)
+		// 	$country=$locdata["country_name"];
 
 		$countrycode="";
-		if(isset($locdata) &&  is_array($locdata) && $locdata["country_code"]!=null)
-			$country=$locdata["country_code"];
+		// if(isset($locdata) &&  is_array($locdata) && $locdata["country_code"]!=null)
+		// 	$country=$locdata["country_code"];
 
 		$countryflag="";
-		if(isset($locdata) &&  is_array($locdata["location"]) && $locdata["location"]["country_flag"]!=null)
-			$countryflag=$locdata["location"]["country_flag"];
+		// if(isset($locdata) &&  is_array($locdata["location"]) && $locdata["location"]["country_flag"]!=null)
+		// 	$countryflag=$locdata["location"]["country_flag"];
 
 		$countryemoji="";
-		if(isset($locdata) && is_array($locdata["location"]) && $locdata["location"]["country_flag_emoji"]!=null)
-			$countryemoji=$locdata["location"]["country_flag_emoji"];
+		// if(isset($locdata) && is_array($locdata["location"]) && $locdata["location"]["country_flag_emoji"]!=null)
+		// 	$countryemoji=$locdata["location"]["country_flag_emoji"];
 
 		$city="";
-		if(isset($locdata) && is_array($locdata) && $locdata["city"]!=null)
-			$city=$locdata["city"];
+		// if(isset($locdata) && is_array($locdata) && $locdata["city"]!=null)
+		// 	$city=$locdata["city"];
 
 		$lat="";
-		if(isset($locdata) &&  is_array($locdata) && $locdata["latitude"]!=null)
-			$lat=$locdata["latitude"];
+		// if(isset($locdata) &&  is_array($locdata) && $locdata["latitude"]!=null)
+		// 	$lat=$locdata["latitude"];
 
 		$lon="";
-		if(isset($locdata) &&  is_array($locdata) && $locdata["longitude"]!=null)
-			$lon=$locdata["longitude"];
+		// if(isset($locdata) &&  is_array($locdata) && $locdata["longitude"]!=null)
+		// 	$lon=$locdata["longitude"];
 
 
 

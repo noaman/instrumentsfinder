@@ -48,7 +48,16 @@ $link_prefix="";
                       @csrf
 
                       <div id="cartdetails_form" style="display:none"></div>
+
+
                     <div class="form-group small">
+                    <label for="inquiryDescription"><b>Enquiry Description</b></label>
+                    <textarea type="desc" class="form-control" id="inquiryDescription" placeholder="Kindly describe your enquiry or provide any additional information "name="inquiryDescription" rows="4"></textarea>
+                    
+                    </div>
+
+
+                      <div class="form-group small">
                     <label for="email small"><b>Your Email *</b></label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email (Required)" name="email" required="true">
                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
@@ -81,20 +90,16 @@ $link_prefix="";
                          @endforeach
                     </select>     
 
-                    </div>
-
-                    <div class="form-group small">
-                    <label for="inquiryDescription"><b>Enquiry Description</b></label>
-                    <textarea type="desc" class="form-control" id="inquiryDescription" placeholder="Kindly describe your requirement here or provide any addadditional information "name="inquiryDescription" rows="4"></textarea>
+                    
                     
                     </div>
                     
-					<!--
+					
                     <div class="form-check form-check-inline small">
                     <input type="checkbox" class="form-check-input" id="resllerbox" name="resellerpricing">
                     <label class="form-check-label" for="exampleCheck1">Need Reseller Pricing</label>
                     </div>
-
+<!--
                     <div class="form-check form-check-inline small">
 
                     <input type="checkbox" class="form-check-input" id="bulkbox" name="bulkpricing">
@@ -123,7 +128,7 @@ data-callback="onSubmit"> --}}
 <!-- 
 <div class="g-recaptcha" data-sitekey="6LeYtMwUAAAAAI-r0duEMYKNLZ2XB-jlAV8JFfDD" data-callback="verifyCaptcha"></div>
     <div id="g-recaptcha-error"></div> -->
-    <input type="submit" name="submit" value="Submit" />
+    <input type="submit" class="btn btn-brand" name="submit" value="Check Price Now" />
 
 {{-- Check Price Now
 </button> --}}

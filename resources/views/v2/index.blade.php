@@ -29,26 +29,33 @@ if($segment=="medical"){
 			if($segment=="medical")
 			{
 				?>
-				<h1>Are you searching for Medical  instruments?</h1><br/>
-				<p>Then InstrumentFinder is the right place. Our experienced technical staff will help you find the right product for your need</p>
+				<h1>Are you searching for Industrial / Medical Test & Laboratory instruments?</h1><br/>
+				<p>Then InstrumentsFinder.com is the right place. Tell us what you need and where you need it, and we'll deliver it at the best prices!</p>
 				<?php
 			}
 			else{
 			?>
-			<h1>Are you searching for Industrial Laboratory instruments?</h1><br/>
-			<p>Then InstrumentFinder is the right place. Our experienced technical staff will help you find the right product for your need</p>
+			<h1>Are you searching for Industrial / Medical Test & Laboratory instruments?</h1><br/>
+			<p>Then InstrumentsFinder.com is the right place. Tell us what you need and where you need it, and we'll deliver it at the best prices!</p>
 			<?php }?>
 		</div>
 
 		<!-- New form added for direct email submit -->
 		<div class="col-md-5 col-sm-6">
-			<div style="margin:10px;display:block;padding:30px;border:dotted 1px;">
-			<h5>Get Quick Quotations & Stock Status. for all In-stock Items you should received a Response within 1-2 hours.</h5>
+			<div style="margin:10px;display:block;padding:30px;">
+			<h5><strong>Get Quick Quotations & Stock Status. </strong><br><i>For all In-stock Items you should receive a Response within 1-2 hours.</i></h5>
 			<form action="{{$link_prefix}}/submitlead" method="post" id="leadform" role="form" onsubmit="return submitUserForm();">
                       @csrf
 
                     <div id="cartdetails_form" style="display:none"></div>
+
                     <div class="form-group small">
+                    <label for="inquiryDescription"><b>Enquiry Description</b></label>
+                    <textarea type="desc" class="form-control" id="inquiryDescription" placeholder="Kindly describe your enquiry or provide any additional information "name="inquiryDescription" rows="4"></textarea>
+                    
+                    </div>
+
+					<div class="form-group small">
                     <label for="email small"><b>Your Email *</b></label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email (Required)" name="email" required="true">
                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
@@ -81,11 +88,6 @@ if($segment=="medical"){
 
                     </div>
 
-                    <div class="form-group small">
-                    <label for="inquiryDescription"><b>Enquiry Description</b></label>
-                    <textarea type="desc" class="form-control" id="inquiryDescription" placeholder="Kindly describe your requirement here or provide any addadditional information "name="inquiryDescription" rows="4"></textarea>
-                    
-                    </div>
                     
 					
                     <div class="form-check form-check-inline small">
