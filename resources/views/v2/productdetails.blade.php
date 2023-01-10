@@ -116,7 +116,7 @@
 
 				</div>
   				<!-- New form added for direct email submit -->
-		<div class="col-md-5 col-sm-6">
+		<div class="col-md-4 col-sm-6">
 			<div style="margin:10px;display:block;padding:30px;">
 			<h5><strong>Get Quick Quotations & Stock Status. </strong><br><i>For all In-stock Items you should receive a Response within 1-2 hours.</i></h5>
 			<form action="{{$link_prefix}}/submitlead" method="post" id="leadform" role="form" onsubmit="return submitUserForm();">
